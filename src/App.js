@@ -1,24 +1,28 @@
-import SplitScreen from "./SplitScreen";
+import React from 'react';
+import SplitScreen from './SplitScreen';
 
-const LeftHandComponent = () => {
+const LeftHandComponent = ({name}) => {
   return (
-    <h1 style={{backgroundColor:'azure'}}>LeftHandComponent</h1>
+    <div style={{backgroundColor:'azure'}}>
+      <h1>LeftHandComponent</h1>
+      <h2>Hello there {name}</h2>
+    </div>
   )
 }
 
-const RightHandComponent = () => {
+const RightHandComponent = ({message}) => {
   return (
-    <p style={{backgroundColor:'lime'}}>RightHandComponent</p>
+    <p style={{backgroundColor:'lime'}}>RightHandComponent with message: {message}</p>
   )
 }
 
 
 function App() {
   return (
-    <SplitScreen 
-    left={LeftHandComponent}
-    right={RightHandComponent}
-    />    
+    <SplitScreen leftWeight={2}>
+      <LeftHandComponent name="Richard" />
+      <RightHandComponent message="Reach the sky" />
+    </SplitScreen>
   );
 }
 
