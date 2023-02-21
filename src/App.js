@@ -42,9 +42,14 @@ const products = [{
 
 function App() {
 	return (
+		<>
 		<Modal>
 			<LargeProductListItem product={products[0]} />
 		</Modal>
+		<NumberedList items={products}, resourceName="product">
+
+		</NumberedList>
+		</>
 		
 	);
 }

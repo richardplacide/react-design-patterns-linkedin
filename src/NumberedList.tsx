@@ -1,8 +1,17 @@
+import React, { ComponentType } from "react"
+
+
+export interface NumberedListProps {
+  items: [],
+  resourceName: string,
+  ItemComponent: ComponentType
+}
+
 export const NumberedList = ({ 
     items, 
     resourceName,
-    itemComponent: ItemComponent
-    }) => {
+    ItemComponent
+    }: NumberedListProps) => {
   return (
     <>
       {items.map((item, i) => (
