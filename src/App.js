@@ -1,9 +1,13 @@
 import React from 'react';
+import { CurrentUserLoader } from './CurrentUserLoader';
+import { UserInfo } from './UserInfo';
 
 
 function App() {
   return (
-    <h1>Welcome to React Design Patterns</h1>
+    <CurrentUserLoader>
+      <UserInfo />
+    </CurrentUserLoader>
   );
 }
 
